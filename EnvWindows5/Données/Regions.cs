@@ -13,10 +13,10 @@ namespace EnvWindows5.Données
         public void chargermentRegions()
         {
             List<Departement> listDepartARA = new List<Departement>() { new Departement("ARA1"), new Departement("ARA2"), new Departement("ARA3") };
-            List<Departement> listDepartBFC = new List<Departement>() { new Departement("BFC1"), new Departement("BFC2"), new Departement("BFC3") };
-            List<Departement> listDepartB = new List<Departement>() { new Departement("B1"), new Departement("B2"), new Departement("B3") };
-            List<Departement> listDepartCVL = new List<Departement>() { new Departement("CVL1"), new Departement("CVL2"), new Departement("CVL3") };
-            List<Departement> listDepartC = new List<Departement>() { new Departement("C1"), new Departement("C2"), new Departement("C3") };
+            List<Departement> listDepartBFC = new List<Departement>() { new Departement("BFC1"), new Departement("BFC2") };
+            List<Departement> listDepartB = new List<Departement>() { new Departement("B1") };
+            List<Departement> listDepartCVL = new List<Departement>() { new Departement("CVL1") };
+            List<Departement> listDepartC = new List<Departement>() { new Departement("C1"), new Departement("C2") };
             this.Add(new Region("ARA", listDepartARA));
             this.Add(new Region("BFC", listDepartBFC));
             this.Add(new Region("B", listDepartB));
