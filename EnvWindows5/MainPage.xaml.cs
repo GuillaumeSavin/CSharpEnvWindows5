@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EnvWindows5.Données;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,22 @@ namespace EnvWindows5
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private Regions listRegion = new Regions();
+        private String regionSelect;
+
+
         public MainPage()
         {
             this.InitializeComponent();
+            listRegion.chargermentRegions();
+            listeRegion.DataContext = listRegion;
+        }
+
+        private void listeRegion_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Region tmp = (Region)listeRegion.SelectedItem;
+            regionSelect = tmp.Nom;
+            listeDepartements.DataContext = listRegion[regionSelect];
         }
     }
 }
